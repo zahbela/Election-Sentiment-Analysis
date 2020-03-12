@@ -33,6 +33,14 @@ class App extends Component {
         </a>
         <a
           className="App-link"
+          href="https://docs.google.com/presentation/d/1aIQDjzH8T6ln5CwGbcpYMV02yeKZtR1Qs4gifmkDhnc/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Milestone 2
+        </a>
+        <a
+          className="App-link"
           href=""
           target="_blank"
           rel="noopener noreferrer"

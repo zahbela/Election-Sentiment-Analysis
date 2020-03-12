@@ -21,7 +21,7 @@ export default class LineGraph extends Component {
 
     buildChart = () => {
         const myChartRef = this.chartRef.current.getContext("2d");
-        const { bernie, elizabeth, joe, mike, tulsi, labels } = this.props;
+        const { bernie, elizabeth, joe, berniesent, elizabethsent, joesent, labels } = this.props;
 
         if (typeof myLineChart !== "undefined") myLineChart.destroy();
 
@@ -32,32 +32,38 @@ export default class LineGraph extends Component {
                 labels: labels,
                 datasets: [
                     {
-                        label: "Bernie",
+                        label: "Bernie Polls",
                         data: bernie,
                         fill: false,
                         borderColor: "#28f169"
                     },
                     {
-                        label: "Joe",
+                        label: "Joe Polls",
                         data: joe,
                         fill: false,
                         borderColor: "#553072"
                     },
                     {
-                        label: "Elizabeth",
+                        label: "Elizabeth Polls",
                         data: elizabeth,
                         fill: false,
                         borderColor: "#7d2e26"
                     },
                     {
-                        label: "Mike",
-                        data: mike,
+                        label: "Bernie Sentiment",
+                        data: berniesent,
                         fill: false,
                         borderColor: "#93aef6"
                     },
                     {
-                        label: "Tulsi",
-                        data: tulsi,
+                        label: "Elizabeth Sentiment",
+                        data: elizabethsent,
+                        fill: false,
+                        borderColor: "#847179"
+                    },
+                    {
+                        label: "Joe Sentiment",
+                        data: joesent,
                         fill: false,
                         borderColor: "#847179"
                     }
