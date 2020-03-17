@@ -2,36 +2,44 @@ import React, { Component } from 'react';
 import classes from "./Dashboard.module.css";
 import LineGraph from "./LineGraph";
 import chartIcon from "../chart-icon.svg";
-import {  Bernie, Joe, Elizabeth, BernieSent, ElizabethSent, JoeSent, quarterLabels } from "./mockData";
+import {  Bernie, Joe, Trump, BernieSent, ElizabethSent, JoeSent, quarterLabels } from "./mockData";
 
 export default class Dashboard extends Component {
     state = {
-      bernie: Bernie,
-      joe: Joe,
-      elizabeth: Elizabeth,
-      berniesent: BernieSent,
-      elizabethsent: ElizabethSent,
-      joesent: JoeSent,
+      poll: Bernie,
+      sentiment: Bernie,
       labels: quarterLabels
     }
 
-    handleButtonClick = e => {
+    handleBernButtonClick = e => {
         const { value } = e.target;
-        const isTwitter = value === "twitter";
-
-        const newBernie = isTwitter ? Bernie : BernieSent;
-        const newElizabeth = isTwitter ? Elizabeth : ElizabethSent;
-        const newJoe = isTwitter ? Joe : JoeSent;
 
        this.setState({
-            bernie: newBernie,
-            joe: newJoe,
-            elizabeth: newElizabeth
+            poll: Bernie,
+            sentiment: Bernie
+        })
+    }
+
+    handleJoeButtonClick = e => {
+      const { value } = e.target;
+
+      this.setState({
+          poll: Joe,
+          sentiment: Joe
+      })
+    }
+
+    handleTrumpButtonClick = e => {
+        const { value } = e.target;
+
+       this.setState({
+            poll: Trump,
+            sentiment: Trump
         })
     }
 
     render() {
-        const { bernie, joe, elizabeth, labels } = this.state;
+        const {poll, sentiment, labels } = this.state;
         return (
             <div className={classes.container}>
                 <header>
@@ -41,28 +49,32 @@ export default class Dashboard extends Component {
 
                 <div className={classes.buttonContainer}>
                     <button
-                        value="twitter"
-                        onClick={this.handleButtonClick}
+                        value="bernie"
+                        onClick={this.handleBernButtonClick}
                     >
-                        Twitter
+                        Sanders
                     </button>
 
+                        <button
+                            value="joe"
+                            onClick={this.handleJoeButtonClick}
+                        >
+                            Biden
+                        </button>
+
                     <button
-                        value="nottwitter"
-                        onClick={this.handleButtonClick}
+                        value="trump"
+                        onClick={this.handleTrumpButtonClick}
                     >
-                        Public Poll
+                        Trump
                     </button>
                 </div>
 
+
                 <LineGraph
-                    bernie = {bernie}
-                    elizabeth = {elizabeth}
-                    joe = {joe}
-            //        elizabethsent = {elizabethsent}
-              //      joesent = {joesent}
-                //    berniesent = {berniesent}
-                    labels={labels} />
+                    poll = {poll}
+                    sentiment = {sentiment}
+                    labels = {labels} />
 
             </div>
         )

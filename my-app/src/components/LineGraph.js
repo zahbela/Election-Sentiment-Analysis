@@ -21,7 +21,7 @@ export default class LineGraph extends Component {
 
     buildChart = () => {
         const myChartRef = this.chartRef.current.getContext("2d");
-        const { bernie, elizabeth, joe, berniesent, elizabethsent, joesent, labels } = this.props;
+        const { poll, sentiment, labels } = this.props;
 
         if (typeof myLineChart !== "undefined") myLineChart.destroy();
 
@@ -32,41 +32,17 @@ export default class LineGraph extends Component {
                 labels: labels,
                 datasets: [
                     {
-                        label: "Bernie Polls",
-                        data: bernie,
+                        label: "Public Poll",
+                        data: poll,
                         fill: false,
-                        borderColor: "#28f169"
+                        borderColor: "#FFEFFF"
                     },
                     {
-                        label: "Joe Polls",
-                        data: joe,
+                        label: "Twitter Sentiment",
+                        data: sentiment,
                         fill: false,
-                        borderColor: "#553072"
+                        borderColor: "#FFFFFF"
                     },
-                    {
-                        label: "Elizabeth Polls",
-                        data: elizabeth,
-                        fill: false,
-                        borderColor: "#7d2e26"
-                    },
-                    {
-                        label: "Bernie Sentiment",
-                        data: berniesent,
-                        fill: false,
-                        borderColor: "#93aef6"
-                    },
-                    {
-                        label: "Elizabeth Sentiment",
-                        data: elizabethsent,
-                        fill: false,
-                        borderColor: "#847179"
-                    },
-                    {
-                        label: "Joe Sentiment",
-                        data: joesent,
-                        fill: false,
-                        borderColor: "#847179"
-                    }
                 ]
             },
             options: {
