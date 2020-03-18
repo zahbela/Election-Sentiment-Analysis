@@ -35,7 +35,7 @@ export default class LineGraph extends Component {
                         label: "Public Poll",
                         data: poll,
                         fill: false,
-                        borderColor: "#FFEFFF"
+                        borderColor: "#2F3FFF"
                     },
                     {
                         label: "Twitter Sentiment",

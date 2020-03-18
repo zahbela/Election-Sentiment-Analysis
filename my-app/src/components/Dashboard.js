@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from "./Dashboard.module.css";
 import LineGraph from "./LineGraph";
 import chartIcon from "../chart-icon.svg";
-import {  Bernie, Joe, Trump, BernieSent, ElizabethSent, JoeSent, quarterLabels } from "./mockData";
+import {  Bernie, Joe, Trump, BernieSent, TrumpSent, JoeSent, quarterLabels } from "./mockData";
 
 export default class Dashboard extends Component {
     state = {
@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
 
        this.setState({
             poll: Bernie,
-            sentiment: Bernie
+            sentiment: BernieSent
         })
     }
 
@@ -25,7 +25,7 @@ export default class Dashboard extends Component {
 
       this.setState({
           poll: Joe,
-          sentiment: Joe
+          sentiment: JoeSent
       })
     }
 
@@ -34,7 +34,7 @@ export default class Dashboard extends Component {
 
        this.setState({
             poll: Trump,
-            sentiment: Trump
+            sentiment: TrumpSent
         })
     }
 
