@@ -15,6 +15,11 @@ To hashtag to filter by can be modified in the file. To modify how many Tweets a
 
 This file can be run as follows: python3 scraper2.py
 
+tweet_parse.py
+This change the file of pulled Tweets to parse for text and full_text keys, modify the file name.
+
+This file can be run as follows: python3 tweet_parse.py
+
 # To PROCESS sentiment:
 Refer to Google Colab notebook. 
 
