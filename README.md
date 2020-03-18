@@ -6,17 +6,17 @@ Presidential Twitter Sentiment Analysis Project
 
 # To SCRAPE Tweets:
 scrape.py
-To hashtag to filter by can be modified in the file. To terminate Tweet pulling, manually end the program.
+The hashtag to filter by can be modified in the file. To terminate Tweet pulling, manually end the program.
 
 This file can be run as follows: python3 scrape.py>output_file_name.
 
 scraper2.py
-To hashtag to filter by can be modified in the file. To modify how many Tweets are pulled, modify the quantitiy in the file.
+The hashtag to filter by can be modified in the file. To modify how many Tweets are pulled, modify the quantitiy in the file.
 
 This file can be run as follows: python3 scraper2.py
 
 tweet_parse.py
-This change the file of pulled Tweets to parse for text and full_text keys, modify the file name.
+To change the file of pulled Tweets to parse for text and full_text keys, modify the file name.
 
 This file can be run as follows: python3 tweet_parse.py
 
