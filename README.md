@@ -1,8 +1,8 @@
 # SentimentAnalysis482
 
-Zahnae Aquino, Dani Lopez, Sheel Patel
-Winter 2020 
-Presidential Twitter Sentiment Analysis Project
+Zahnae Aquino, Dani Lopez, Sheel Patel 
+Presidential Twitter Sentiment Analysis 
+
 
 # To SCRAPE Tweets:
 scrape.py
